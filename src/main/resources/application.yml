@@ -1,0 +1,21 @@
+spring:
+  # MariaDB Setting
+  datasource:
+    driverClassName: org.mariadb.jdbc.Driver
+    url: 'jdbc:mariadb://localhost:3306/jpa-study'
+    username: developer
+    password: password
+  # JPA Setting
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+    properties:
+      hibernate:
+        format_sql: true
+        globally_quoted_identifiers: true
+springdoc:
+  swagger-ui:
+    operations-sorter: alpha
+    display-request-duration: true
+    disable-swagger-default-url: true
