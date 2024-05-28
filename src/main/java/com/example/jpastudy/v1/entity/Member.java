@@ -1,4 +1,4 @@
-package com.example.jpastudy.dirtycheck.entity;
+package com.example.jpastudy.v1.entity;
 
 import jakarta.persistence.*;
 import lombok.Getter;

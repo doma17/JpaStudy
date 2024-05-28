@@ -1,7 +1,7 @@
-package com.example.jpastudy.dirtycheck.controller;
+package com.example.jpastudy.v1.controller;
 
-import com.example.jpastudy.dirtycheck.entity.Member;
-import com.example.jpastudy.dirtycheck.service.MemberService;
+import com.example.jpastudy.v1.entity.Member;
+import com.example.jpastudy.v1.service.MemberService;
 import io.swagger.v3.oas.annotations.tags.Tag;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.*;

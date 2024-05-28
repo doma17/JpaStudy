@@ -1,7 +1,7 @@
-package com.example.jpastudy.dirtycheck.service;
+package com.example.jpastudy.v1.service;
 
-import com.example.jpastudy.dirtycheck.entity.Member;
-import com.example.jpastudy.dirtycheck.repository.MemberRepository;
+import com.example.jpastudy.v1.entity.Member;
+import com.example.jpastudy.v1.repository.MemberRepository;
 import jakarta.transaction.Transactional;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
@@ -18,7 +18,7 @@ import java.util.List;
 public class MemberService {
 
     private final MemberRepository memberRepository;
-    
+
     /**
      * 더티 체킹 기능을 테스트하기 위한 메서드
      */
@@ -36,6 +36,7 @@ public class MemberService {
     public List<Member> getMembers(int pageNum, int pageSize, String criteria) {
         log.info("[getMembers] pageNum = {}, pageSize = {}, criteria = {}", pageNum, pageSize, criteria);
         Pageable pageable = PageRequest.of(pageNum, pageSize, Sort.by(Sort.Direction.DESC, criteria));
+
         return memberRepository.findAll(pageable).getContent();
     }
 
