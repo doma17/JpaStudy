@@ -91,6 +91,8 @@ public interface MemberRepository extends JpaRepository<Member, Long> {
 - ResponseUtil은 API 응답을 편리하게 처리하기 위한 유틸리티 클래스
 - API 응답을 통일된 형태로 반환하고자 할 때 사용
 
+![스크린샷 2024-05-29 오후 8 32 52](https://github.com/doma17/SpringJpaStudy/assets/67214970/9cdbfbcb-2792-4edf-8c20-78cb1d5964cb)
+
 ---
 ## v4
 
