@@ -21,7 +21,6 @@
 ---
 ## v1
 
----
 ### Dirty Checking
 
 Dirty Checking은 JPA에서 제공하는 기능 중 하나로, Entity의 상태가 변경되었는지를 확인하는 기능입니다. 이 기능은 트랜잭션이 커밋되는 시점에 발생하며, 변경 감지를 통해 SQL을 실행합니다.
@@ -52,10 +51,9 @@ public List<Member> getMembers(int pageNum, int pageSize, String criteria) {
     return memberRepository.findAll(pageable).getContent();
 }
 ```
-
+---
 ## v2
 
----
 ### Auditing
 
 Auditing은 엔티티의 생성일, 수정일을 자동으로 관리하는 기능입니다. JPA에서는 Auditing을 지원하기 위해 `@CreatedDate`, `@LastModifiedDate` 어노테이션을 제공합니다.
@@ -85,19 +83,17 @@ public interface MemberRepository extends JpaRepository<Member, Long> {
     List<Member> findMembers(@Param("username") String username);
 }
 ```
-
+---
 ## v3
 
----
 ### ResponseUtil
 
 - ResponseUtil은 API 응답을 편리하게 처리하기 위한 유틸리티 클래스
 - API 응답을 통일된 형태로 반환하고자 할 때 사용
 
-
+---
 ## v4
 
----
 ### Entity Graph
 
 - 연관있는 엔티티 끼리 묻어서 가져오는 방법 
